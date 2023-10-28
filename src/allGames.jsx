@@ -75,6 +75,30 @@ export default function AllGames() {
                     <div className="icon"><IoIosFlash/></div>
                     <span>Quick</span>
                 </div>
+                <div className='indiv'>
+                    <div className="icon"><IoMdStar/></div>
+                    <span>New</span>
+                </div>
+                <div className='indiv'>
+                    <div className="icon"><IoIosWarning/></div>
+                    <span>Crash</span>
+                </div>
+                <div className='indiv'>
+                    <div className="icon"><IoIosFlash/></div>
+                    <span>Quick</span>
+                </div>
+                <div className='indiv'>
+                    <div className="icon"><IoMdStar/></div>
+                    <span>New</span>
+                </div>
+                <div className='indiv'>
+                    <div className="icon"><IoIosWarning/></div>
+                    <span>Crash</span>
+                </div>
+                <div className='indiv'>
+                    <div className="icon"><IoIosFlash/></div>
+                    <span>Quick</span>
+                </div>
             </div>
                 <div className="games">
                     {

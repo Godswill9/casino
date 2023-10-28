@@ -23,7 +23,7 @@
         align-items: flex-start;
         background-color: rgb(10, 10, 28);
         border: 3px solid rgba(0, 212, 249, 0.147);
-        margin-top: 2em;
+        // margin-top: 2em;
         .headerComp{
             width: 10em;
             // border: 1px solid black;
@@ -53,7 +53,14 @@
             display: none;
             width: 100%;
             margin-top: 5px;
-            justify-content: space-evenly;
+            justify-content: flex-start;
+            position: fixed;
+            width: 59%;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.906);
+            overflow: auto;
+            top: 4.3%;
+            align-items: flex-start;
             .indiv{
                 // border: 1px solid black;
                 display: flex;
@@ -91,6 +98,10 @@
                 padding: 7px;
                 background-color: rgb(9, 92, 9);
                 color: white;
+                position: fixed;
+                width: 42%;
+                z-index: 2;
+                top: 0%;
                 .icon{
                         border-right: 1px solid black;
                    width: 4em;
@@ -131,6 +142,10 @@
                 justify-content: space-between;
                 padding: 10px;
                 color: white;
+                position: fixed;
+                width: 42%;
+                z-index: 2;
+                background-color: black;
                 .search-bar {
                     display: flex;
                     align-items: center;
@@ -166,6 +181,7 @@
                 overflow: hidden;
                 height: 80%;
                 padding: 8px;
+                margin-top: 6em;
             }
             
             .aGame {
@@ -252,22 +268,24 @@
                 }
             }
         }
-        @media (max-width:718px) {
+        @media (max-width:776px) {
             .headerComp{
                  display: none;
             }
             .headerMobile{
                  display: flex;
+                //  top: 4%;
             }
         }
     }
-    @media (max-width:718px) {
+    @media (max-width:776px) {
        .inner{
         flex-direction: column;
         .allGames{
             margin-left: 0px;
             .announcement{
                 align-items: center;
+                width: 59%;
               .vals{
                 flex-direction: column;
                 overflow: hidden;
@@ -291,21 +309,67 @@
     @media (max-width:570px) {
         .inner{
             width: 70%;
+            .headerMobile{
+                width: 69%;
+            }
+            .allGames{
+                .announcement{
+                    width: 69%;
+                }
+            }
         }
     }
     @media (max-width:502px) {
         .inner{
             width: 80%;
+            .headerMobile{
+                width: 79%;
+            }
+            .allGames{
+                .announcement{
+                    width: 79%;
+                }
+            }
         }
     }
     @media (max-width:430px) {
         .inner{
-            width: 90%;
+            width: 100%;
+            background-color: rgba(10, 10, 28, 0.886);
+            .headerMobile{
+                width: 99%;
+            }
+            .allGames{
+                .announcement{
+                    width: 99%;
+                }
+            }
         }
     }
     @media (max-width:355px) {
         .inner{
             width: 100%;
+            .headerMobile{
+                width: 99%;
+            }
+            .allGames{
+                .announcement{
+                    width: 99%;
+                }
+            }
+        }
+    }
+    @media (min-width:779px) {
+        .inner{
+            // width: 100%;
+            .headerMobile{
+            }
+            .allGames{
+                .announcement{
+                    height: 4em;
+                    // width: 99%;
+                }
+            }
         }
     }
     @media (max-width:391px) {
