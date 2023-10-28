@@ -1,14 +1,22 @@
-import { useState } from 'react'
-import Game from './game'
-import Header from './header'
+import { useState } from 'react';
+import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
+
+import Game from './game';
+import Header from './header';
+import AllGames from './allGames';
 
 function App() {
-
   return (
-    <>
-    <Game/>
-    </>
-  )
+    <div>
+    <BrowserRouter>
+      <Routes>
+      <Route path="/game/:id" element={<Game/>} />
+          <Route path="/all-games" element={<AllGames/>} />
+        </Routes>
+    </BrowserRouter>
+    </div>
+  );
 }
 
-export default App
+
+export default App;

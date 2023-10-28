@@ -1,13 +1,17 @@
 import React from 'react'
 import './stylings/game.css'
 import { IoIosChatbubbles, IoIosMenu, IoIosArrowBack,} from 'react-icons/io';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
+  const navigate=useNavigate()
   return (
     <div className='headerCont'>
         <div className="innerHead">
         <div className="nav">
-        <div className="icon"> <IoIosArrowBack size={22} /></div>
+        <div className="icon" onClick={()=>{
+          navigate("/all-games")
+        }}> <IoIosArrowBack size={22} /></div>
        <div className="amt">0.00</div>
        <div className="name">Sporty Hero</div>
        <div className="msg"><IoIosChatbubbles size={22} /></div>

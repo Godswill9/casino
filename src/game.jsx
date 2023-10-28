@@ -57,7 +57,7 @@ export default function Game() {
                               <label className="switch">
           <input type="checkbox" />
           <span className="slider round"></span>
-        </label>
+        </label> 
                         </div>
                     </div>
                     <div className="betCont1">
