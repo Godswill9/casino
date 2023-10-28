@@ -145,7 +145,7 @@
                 position: fixed;
                 width: 42%;
                 z-index: 2;
-                background-color: black;
+                background-color: rgba(0, 0, 0, 0.922);
                 .search-bar {
                     display: flex;
                     align-items: center;
@@ -367,6 +367,19 @@
             .allGames{
                 .announcement{
                     height: 4em;
+                    // width: 99%;
+                }
+            }
+        }
+    }
+    @media (max-width:779px) {
+        .inner{
+            // width: 100%;
+            .headerMobile{
+            }
+            .allGames{
+                .announcement{
+                    height: 2.5em;
                     // width: 99%;
                 }
             }

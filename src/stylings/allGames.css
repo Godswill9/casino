@@ -137,7 +137,7 @@
   position: fixed;
   width: 42%;
   z-index: 2;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.922);
 }
 .allCont .inner .allGames .heading .search-bar {
   display: flex;
@@ -334,6 +334,11 @@
 @media (min-width: 779px) {
   .allCont .inner .allGames .announcement {
     height: 4em;
+  }
+}
+@media (max-width: 779px) {
+  .allCont .inner .allGames .announcement {
+    height: 2.5em;
   }
 }
 @media (max-width: 391px) {
