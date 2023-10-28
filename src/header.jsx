@@ -10,7 +10,7 @@ export default function Header() {
         <div className="innerHead">
         <div className="nav">
         <div className="icon" onClick={()=>{
-          navigate("/all-games")
+          navigate("/")
         }}> <IoIosArrowBack size={22} /></div>
        <div className="amt">0.00</div>
        <div className="name">Sporty Hero</div>
