@@ -9,12 +9,9 @@
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(26, 26, 26);
-  background: url("../../public/vite.svg") rgb(1, 45, 8);
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: color-dodge;

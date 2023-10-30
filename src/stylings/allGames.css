@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgba(3, 27, 39, 0.517);
+}
+
 .allCont {
   width: 100%;
   height: -moz-fit-content;
@@ -12,7 +16,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../../public/vite.svg") rgb(2, 12, 2);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -85,6 +88,7 @@
   margin-left: 20px;
   width: 100%;
   overflow: hidden;
+  /* For larger screens, use 2 items in a row */
 }
 .allCont .inner .allGames .announcement {
   display: flex;
@@ -163,7 +167,6 @@
 }
 .allCont .inner .allGames .games {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(7.5em, 1fr)); /* 4 columns on larger screens */
   gap: 10px;
   align-items: center;
   overflow: hidden;
@@ -173,12 +176,13 @@
 }
 .allCont .inner .allGames .aGame {
   border: 1px solid rgba(0, 0, 0, 0.317);
-  height: 7.5em;
+  height: 18em;
   position: relative;
   border-radius: 20px;
   cursor: pointer;
   color: white;
   background-color: rgb(38, 38, 38);
+  overflow: hidden;
 }
 .allCont .inner .allGames .aGame .top {
   position: absolute;
@@ -197,11 +201,13 @@
   transform: skewY(400%);
   background-color: red;
   color: white;
-  padding: 2px;
+  padding: 8px;
+  margin-left: 10px;
 }
 .allCont .inner .allGames .aGame .top .right {
   display: flex;
   align-items: center;
+  padding: 14px;
   padding-right: 10px;
   background-color: rgba(0, 0, 0, 0.591);
   justify-content: space-between;
@@ -210,13 +216,25 @@
   display: block;
   margin-left: 3px;
   background-color: green;
-  width: 5px;
-  height: 5px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   margin-right: 7px;
 }
 .allCont .inner .allGames .aGame .top .right .players {
-  font-size: 12px;
+  font-size: 15px;
+}
+@media (max-width: 875px) {
+  .allCont .inner .allGames .aGame .top .right {
+    padding: 8px;
+  }
+  .allCont .inner .allGames .aGame .top .right .dot {
+    width: 6px;
+    height: 6px;
+  }
+  .allCont .inner .allGames .aGame .top .right .players {
+    font-size: 11px;
+  }
 }
 .allCont .inner .allGames .aGame .center {
   width: 100%;
@@ -235,19 +253,27 @@
   background-color: rgba(255, 255, 255, 0.165);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  height: 30%;
+  align-items: center;
 }
 .allCont .inner .allGames .aGame .bottom .gameName {
-  font-size: 14px;
+  font-size: 19px;
   text-align: center;
   width: 100%;
 }
 .allCont .inner .allGames .aGame .bottom .icon {
   position: absolute;
   right: 5%;
+  font-size: 22px;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .allCont .inner .allGames .games {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    grid-template-columns: repeat(1, 1fr); /* 1 column on smaller screens */
+  }
+}
+@media (min-width: 769px) {
+  .allCont .inner .allGames .games {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on larger screens */
   }
 }
 @media (max-width: 776px) {

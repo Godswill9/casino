@@ -3,6 +3,9 @@
     padding: 0px;
     box-sizing: border-box;
 }
+body{
+    background-color: rgba(3, 27, 39, 0.517);
+}
 
 .allCont{
     // border: 1px solid black;
@@ -12,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background:url('../../public/vite.svg') rgb(2, 12, 2);
+    // background:url('../../public/vite.svg') rgb(2, 12, 2);
     background-repeat: no-repeat;
     background-size: cover;
     .inner{
@@ -173,9 +176,8 @@
                   
             }
             .games {
-                // border: 1px solid rgba(0, 0, 0, 0.317);
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(7.5em, 1fr)); /* 4 columns on larger screens */
+                // grid-template-columns: repeat(auto-fill, minmax(7.5em, 1fr)); /* 4 columns on larger screens */
                 gap: 10px;
                 align-items: center;
                 overflow: hidden;
@@ -186,12 +188,13 @@
             
             .aGame {
                 border: 1px solid rgba(0, 0, 0, 0.317);
-                height: 7.5em;
+                height: 18em;
                 position: relative;
                 border-radius: 20px;
                 cursor: pointer;
                 color: white;
                 background-color:rgb(38, 38, 38);
+                overflow: hidden;
                 .top {
                     position: absolute;
                     top: 0%;
@@ -208,13 +211,15 @@
                         transform: skewY(400%);
                         background-color: red;
                         color: white;
-                        padding: 2px;
+                        padding: 8px;
+                        margin-left: 10px;
                     }
                     .right {
                         // border-left: 1px solid rgba(0, 0, 0, 0.317);
                         // border-bottom: 1px solid rgba(0, 0, 0, 0.317);
                         display: flex;
                         align-items: center;
+                        padding: 14px;
                         padding-right: 10px;
                         background-color:rgba(0, 0, 0, 0.591);
                         justify-content: space-between;
@@ -222,14 +227,27 @@
                             display: block;
                             margin-left: 3px;
                             background-color: green;
-                            width: 5px;
-                            height: 5px;
+                            width:9px;
+                            height:9px;
                             border-radius: 50%;
                             margin-right: 7px;
                         }
                         .players {
-                            font-size: 12px;
+                            font-size: 15px;
                         }
+                    }
+                    @media (max-width:875px) {
+                        .right{
+                            padding: 8px;
+                          .dot{
+                            width:6px;
+                            height:6px;
+                        }
+                        .players {
+                            font-size: 11px;
+                        }   
+                        }
+                       
                     }
                 }
                 .center {
@@ -250,23 +268,42 @@
                     background-color:rgba(255, 255, 255, 0.165);
                     border-bottom-left-radius: 20px;
                     border-bottom-right-radius: 20px;
+                    height: 30%;
+                    align-items: center;
                     .gameName {
-                        font-size: 14px;
+                        font-size: 19px;
                         text-align: center;
                         width: 100%;
                     }
                     .icon {
                         position: absolute;
                         right: 5%;
+                        font-size: 22px;
                     }
                 }
             }
-            
-            @media (max-width: 600px) {
+            // @media (max-width:768px) {
+            //     .aGame{
+            //         height: 18em;
+            //     }
+            // }
+            @media (max-width: 768px) {
                 .games {
-                    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+                    grid-template-columns: repeat(1, 1fr); /* 1 column on smaller screens */
                 }
             }
+            
+            /* For larger screens, use 2 items in a row */
+            @media (min-width: 769px) {
+                .games {
+                    grid-template-columns: repeat(2, 1fr); /* 2 columns on larger screens */
+                }
+            }
+            // @media (max-width: 600px) {
+            //     .games {
+            //         grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+            //     }
+            // }
         }
         @media (max-width:776px) {
             .headerComp{

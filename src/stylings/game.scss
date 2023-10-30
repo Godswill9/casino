@@ -5,15 +5,15 @@
     font-family: sans-serif;
 }
 
-.gameCont{
+.gameCont{ 
     width: 100%;
     height: fit-content;
-    min-height: 100vh;
+    // min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(26, 26, 26);
-    background:url('../../public/vite.svg') rgb(1, 45, 8);
+    // background-color: rgb(26, 26, 26);
+    // background:url('../../public/vite.svg') rgb(1, 45, 8);
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: color-dodge;
@@ -136,11 +136,13 @@
             display: flex;
             font-size: 13px;
             background-color: rgb(25, 25, 25);
+            // height: 26em;
             .left{
                 // border: 1px solid black;
                 width: 60%;
                 margin: 1px;
                 background-color: rgba(29, 29, 29, 0.185);
+                // height: 100%;
                 .totalBets{
                     display: flex;
                     align-items: center;
@@ -213,6 +215,7 @@
             //  border: 1px solid black;;  
              width: 65%;
              margin: 1px;
+            //  height: 100%;
             //  background-color: rgba(255, 255, 255, 0.185);
              
              .allBetCont{
