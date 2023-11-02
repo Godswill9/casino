@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: rgba(3, 27, 39, 0.517);
-}
-
 .allCont {
   width: 100%;
   height: -moz-fit-content;
@@ -20,7 +16,7 @@ body {
   background-size: cover;
 }
 .allCont .inner {
-  width: 60%;
+  width: 100%;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
@@ -56,7 +52,6 @@ body {
   margin-top: 5px;
   justify-content: flex-start;
   position: fixed;
-  width: 59%;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.906);
   overflow: auto;
@@ -88,6 +83,7 @@ body {
   margin-left: 20px;
   width: 100%;
   overflow: hidden;
+  height: 100%;
   /* For larger screens, use 2 items in a row */
 }
 .allCont .inner .allGames .announcement {
@@ -97,7 +93,7 @@ body {
   background-color: rgb(9, 92, 9);
   color: white;
   position: fixed;
-  width: 42%;
+  width: 100%;
   z-index: 2;
   top: 0%;
 }
@@ -139,7 +135,7 @@ body {
   padding: 10px;
   color: white;
   position: fixed;
-  width: 42%;
+  width: 80%;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.922);
 }
@@ -266,14 +262,19 @@ body {
   right: 5%;
   font-size: 22px;
 }
-@media (max-width: 768px) {
+@media (max-width: 848px) {
+  .allCont .inner .allGames .games {
+    grid-template-columns: repeat(2, 1fr); /* 1 column on smaller screens */
+  }
+}
+@media (max-width: 454px) {
   .allCont .inner .allGames .games {
     grid-template-columns: repeat(1, 1fr); /* 1 column on smaller screens */
   }
 }
 @media (min-width: 769px) {
   .allCont .inner .allGames .games {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on larger screens */
+    grid-template-columns: repeat(3, 1fr); /* 2 columns on larger screens */
   }
 }
 @media (max-width: 776px) {
@@ -293,7 +294,6 @@ body {
   }
   .allCont .inner .allGames .announcement {
     align-items: center;
-    width: 59%;
   }
   .allCont .inner .allGames .announcement .vals {
     flex-direction: column;
@@ -310,28 +310,6 @@ body {
   }
   .allCont .inner .allGames .games {
     height: 100%;
-  }
-}
-@media (max-width: 570px) {
-  .allCont .inner {
-    width: 70%;
-  }
-  .allCont .inner .headerMobile {
-    width: 69%;
-  }
-  .allCont .inner .allGames .announcement {
-    width: 69%;
-  }
-}
-@media (max-width: 502px) {
-  .allCont .inner {
-    width: 80%;
-  }
-  .allCont .inner .headerMobile {
-    width: 79%;
-  }
-  .allCont .inner .allGames .announcement {
-    width: 79%;
   }
 }
 @media (max-width: 430px) {

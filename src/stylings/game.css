@@ -9,15 +9,17 @@
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(10, 2, 40, 0.926);
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: color-dodge;
 }
 .gameCont .inner {
-  width: 22em;
+  width: 30%;
   border: 3px solid rgba(0, 212, 249, 0.141);
   padding: 2px;
   background-color: rgb(25, 25, 25);
@@ -111,10 +113,50 @@
   justify-content: center;
   width: 99%;
   height: 12em;
+  position: relative;
   margin: 2px;
   flex-direction: column;
   border-radius: 10px;
   background-color: white;
+}
+.gameCont .inner .gameEnv .powerUpIndicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.gameCont .inner .gameEnv .powerUpIndicator h3 {
+  margin-top: 4em;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+.gameCont .inner .gameEnv .powerUpIndicator .line {
+  height: 4px;
+  width: 80%;
+  margin-top: 15px;
+  background-color: rgb(245, 84, 138);
+  transition: linear ease-in-out;
+}
+.gameCont .inner .gameEnv .oddsCounter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 3em;
+}
+.gameCont .inner .gameEnv img {
+  width: 100%;
+  height: 100%;
 }
 .gameCont .inner .bettingSection {
   width: 100%;
@@ -172,7 +214,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 18em;
+  height: 19em;
   overflow: auto;
   margin-top: 2px;
   color: rgb(218, 218, 218);
@@ -195,6 +237,7 @@
 .gameCont .inner .bettingSection .right .allBetCont {
   margin-top: 4px;
   border-radius: 5px;
+  height: 13em;
   background-color: rgba(255, 255, 255, 0.185);
 }
 .gameCont .inner .bettingSection .right .switches {
@@ -280,7 +323,37 @@
   color: white;
   border: 1px solid transparent;
 }
-@media (max-width: 473px) {
+@media (max-width: 1053px) {
+  .gameCont .inner {
+    width: 37%;
+  }
+}
+@media (max-width: 909px) {
+  .gameCont .inner {
+    width: 47%;
+  }
+}
+@media (max-width: 701px) {
+  .gameCont .inner {
+    width: 54%;
+  }
+}
+@media (max-width: 594px) {
+  .gameCont .inner {
+    width: 64%;
+  }
+}
+@media (max-width: 506px) {
+  .gameCont .inner {
+    width: 77%;
+  }
+}
+@media (max-width: 426px) {
+  .gameCont .inner {
+    width: 88%;
+  }
+}
+@media (max-width: 383px) {
   .gameCont .inner {
     width: 100%;
   }
